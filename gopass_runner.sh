@@ -81,9 +81,9 @@ case "$act" in
     sel="$(get_sel "${2:-}")"; [[ -z "${sel:-}" ]] && sel="$(pick)"; [[ -z "${sel:-}" ]] && exit 0
     save_last "$sel"; clip "$sel"
     ;;
-  username|user)
+  username)
     sel="$(get_sel "${2:-}")"; [[ -z "${sel:-}" ]] && sel="$(pick)"; [[ -z "${sel:-}" ]] && exit 0
-    save_last "$sel"; clip "$sel" "user"
+    save_last "$sel"; clip "$sel" "username"
     ;;
   url)
     sel="$(get_sel "${2:-}")"; [[ -z "${sel:-}" ]] && sel="$(pick)"; [[ -z "${sel:-}" ]] && exit 0
